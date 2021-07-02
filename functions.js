@@ -31,3 +31,21 @@ function findUniqueChar(str){
 }
 console.log(findUniqueChar('Check it out'))
 
+// PANGRAM
+function isThisAPangrams(pangram) {
+    let alphabet = 'abcdefghijklmnopqrstuvwxyz';
+    let regex = /\pangram/g;
+    let lowercase = pangram.toLowerCase().replace(regex, '');
+
+    for(let i = 0; i < alphabet.length; i++){
+        if(lowercase.indexOf(alphabet[i]) === -1){
+            return 'Heck no this is not a pangram!'
+        }
+    }
+
+    return 'pangram'
+}
+isThisAPangrams('Mr. Jock, TV quiz PhD., bags few lynx.')
+
+// isThisAPangrams('Yo yo yo, check it out!')
+
